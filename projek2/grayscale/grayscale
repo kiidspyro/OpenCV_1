@@ -1,0 +1,9 @@
+import cv2
+
+# Membaca citra Grayscale
+img_gray = cv2.imread('kumolonimbus.jpg', cv2.IMREAD_GRAYSCALE)
+
+# Menampilkan citra Grayscale
+cv2.imshow('Citra Grayscale', img_gray)
+cv2.waitKey(0)
+cv2.destroyAllWindows()

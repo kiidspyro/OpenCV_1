@@ -1,0 +1,24 @@
+import cv2
+import numpy as np
+
+# Load an image
+image_path = "land1.jpg"
+img = cv2.imread(image_path)
+
+# Check if the image was loaded successfully
+if img is None:
+    print("Could not read the image:", image_path)
+else:
+    # Display the image
+    cv2.imshow("Display window", img)
+    
+    # Wait for a keystroke and store the key code
+    k = cv2.waitKey(0)
+    
+    # If the 's' key is pressed, save the image
+    if k == ord('s'):
+        cv2.imwrite("land1.jpg", img)
+
+    # Close all OpenCV windows
+    cv2.destroyAllWindows()
+
